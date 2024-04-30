@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taille de chaussure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  </head>
+  <body>
+    <header class="hd">
+      <h1>Application de mesure du Numero de chaussure/Taille de la personne </h1>
+    </header>
+    <div class="principale">
+      <form action="http://localhost:5000" , method="POST">
+        <p>
+          Choisir la taille d'une personne(cm) :
+          <input type="number" name="taille" min="20" max="350" /><input
+            type="submit"
+            value="OK"
+          />
+        </p>
+      </form>
+      <br />
+      <p>Prediction du Numero de chaussure: {{result}}</p>
+    </div>
+  </body>
+</html>
